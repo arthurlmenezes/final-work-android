@@ -15,7 +15,7 @@ O sistema deverá ter um usuários do tipo comprador que podera se registar, vis
 
 ## Requisitos funcionais
 
-<strong>RF1</strong>: O sistema deve permir o cadastro de um usuário com nome, e-mail, numero de telefone, senha e endereço.
+<strong>RF1</strong>: O sistema deve permitir o cadastro de um usuário com nome, e-mail, numero de telefone, senha e endereço.
 
 <strong>RF2</strong>: O sistema deve permitir o login de um usuário por meio do email e senha.
 
@@ -25,7 +25,7 @@ O sistema deverá ter um usuários do tipo comprador que podera se registar, vis
 
 <strong>RF5</strong>: O sistema deve permitir que um usuario adicione uma imagem ao seu perfil que pode ser escolhida da galeria ou pela camera.
 
-<strong>RF6</strong>: O sistema deve possoir um sistema de localização por mapa para cada anuncio.
+<strong>RF6</strong>: O sistema deve possuir um sistema de localização por mapa para cada anuncio.
 
 <strong>RF7</strong>: O sistema deve possuir um botão para cada anuncio que redireciona o usuario para o whatsapp.
 
