@@ -106,7 +106,7 @@
             android:layout_marginBottom="100dp"
             android:backgroundTint="#626262"
             android:ems="10"
-            android:hint="Senha (até 8 caracteres)"
+            android:hint="Senha (mínimo de 8 caracteres)"
             android:textColor="@color/black"
             android:inputType="textPassword"
             android:textColorHint="#626262"
