@@ -27,6 +27,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,6 +68,7 @@ public class SignUpFragment extends Fragment {
     private ProgressBar progressBar;
 
     private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firebaseFirestore;
     private String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
 
 
@@ -115,6 +121,8 @@ public class SignUpFragment extends Fragment {
         progressBar = view.findViewById(R.id.sign_up_progressbar);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+
 
         return view;
     }
@@ -244,16 +252,35 @@ public class SignUpFragment extends Fragment {
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                 if(task.isSuccessful()){
-                                     Intent mainIntent = new Intent(getActivity(),MainActivity.class);
-                                     startActivity(mainIntent);
-                                     getActivity().finish();
+                                 if(task.isSuccessful()) {
+
+                                     Map<Object,String> userdata = new HashMap<>();
+                                     userdata.put("fullname",fullName.getText().toString());
+
+                                     firebaseFirestore.collection("USERS")
+                                             .add(userdata)
+                                             .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                                 @Override
+                                                 public void onComplete(@NonNull Task<DocumentReference> task) {
+                                                     if (task.isSuccessful()) {
+                                                         Intent mainIntent = new Intent(getActivity(),MainActivity.class);
+                                                         startActivity(mainIntent);
+                                                         getActivity().finish();
+                                                     }else{
+                                                         progressBar.setVisibility(View.INVISIBLE);
+                                                         signUpBtn.setEnabled(true);
+                                                         signUpBtn.setTextColor(Color.rgb(255,255, 255));
+                                                         String error = task.getException().getMessage();
+                                                         Toast.makeText(getActivity(),"error",Toast.LENGTH_SHORT).show();
+                                                     }
+                                                 }
+                                             });
                                  }else{
                                      progressBar.setVisibility(View.INVISIBLE);
                                      signUpBtn.setEnabled(true);
                                      signUpBtn.setTextColor(Color.rgb(255,255, 255));
                                      String error = task.getException().getMessage();
-                                     Toast.makeText(getActivity(),"error",Toast.LENGTH_SHORT).show();
+                                     Toast.makeText(getActivity(),"O email já está em uso!",Toast.LENGTH_SHORT).show();
                                  }
                             }
                         });
