@@ -132,8 +132,15 @@ public class SignUpFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         alreadyHaveAnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 setFragment(new SignInFragment());
+            }
+        });
+
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainIntent();
             }
         });
 
@@ -204,7 +211,7 @@ public class SignUpFragment extends Fragment {
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 checkEmailAndPassword();
             }
         });
@@ -263,9 +270,7 @@ public class SignUpFragment extends Fragment {
                                                  @Override
                                                  public void onComplete(@NonNull Task<DocumentReference> task) {
                                                      if (task.isSuccessful()) {
-                                                         Intent mainIntent = new Intent(getActivity(),MainActivity.class);
-                                                         startActivity(mainIntent);
-                                                         getActivity().finish();
+                                                        mainIntent();
                                                      }else{
                                                          progressBar.setVisibility(View.INVISIBLE);
                                                          signUpBtn.setEnabled(true);
@@ -290,5 +295,10 @@ public class SignUpFragment extends Fragment {
         }else{
             email.setError("Email inválido!");
         }
+    }
+    private void mainIntent(){
+        Intent mainIntent = new Intent(getActivity(), MainActivity.class);
+        startActivity(mainIntent);
+        getActivity().finish();
     }
 }

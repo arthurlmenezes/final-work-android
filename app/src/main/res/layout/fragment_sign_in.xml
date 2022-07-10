@@ -111,6 +111,7 @@
                     android:layout_marginBottom="164dp"
                     android:background="#00CC66"
                     android:text="Entrar"
+                    android:enabled="false"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
