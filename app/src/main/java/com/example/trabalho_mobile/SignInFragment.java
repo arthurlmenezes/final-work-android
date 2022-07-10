@@ -130,6 +130,7 @@ public class SignInFragment extends Fragment {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                boolean onResetPasswordFragment = true;
                 setFragment(new ResetPasswordFragment());
             }
         });

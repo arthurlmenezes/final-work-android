@@ -11,18 +11,22 @@ import androidx.fragment.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +54,11 @@ public class ResetPasswordFragment extends Fragment {
     private TextView goBack;
 
     private FrameLayout parentFrameLayout;
+
+    private ViewGroup emailTextContainer;
+    private TextView emailText;
+    private ProgressBar progressBar;
+
     private FirebaseAuth firebaseAuth;
 
 
@@ -90,6 +99,11 @@ public class ResetPasswordFragment extends Fragment {
         resetPasswordBtn = view.findViewById(R.id.reset_password_btn);
         goBack = view.findViewById(R.id.tv_forgot_password_go_back);
 
+        emailTextContainer = view.findViewById(R.id.forgot_password_email_text_container);
+        emailText = view.findViewById(R.id.forgot_password_email_text);
+        progressBar = view.findViewById(R.id.forgot_password_progressbar);
+
+
         parentFrameLayout = getActivity().findViewById(R.id.register_framelayout);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -122,6 +136,13 @@ public class ResetPasswordFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                TransitionManager.beginDelayedTransition(emailTextContainer);
+                emailText.setVisibility(View.GONE);
+
+                TransitionManager.beginDelayedTransition(emailTextContainer);
+                emailText.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
+
                 resetPasswordBtn.setEnabled(false);
                 resetPasswordBtn.setTextColor(Color.argb(50,255,255,255));
 
@@ -133,7 +154,13 @@ public class ResetPasswordFragment extends Fragment {
                                     Toast.makeText(getActivity(), "Email enviado com sucesso!", Toast.LENGTH_SHORT);
                                 }else{
                                     String error = task.getException().getMessage();
-                                    Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT);
+                                    progressBar.setVisibility(View.GONE);
+
+                                    emailText.setText(error);
+                                    emailText.setTextColor(getResources().getColor(R.color.btnVerde));
+                                    TransitionManager.beginDelayedTransition(emailTextContainer);
+                                    emailText.setVisibility(View.VISIBLE);
+
                                 }
                                 resetPasswordBtn.setEnabled(true);
                                 resetPasswordBtn.setTextColor(Color.rgb(255,255,255));
