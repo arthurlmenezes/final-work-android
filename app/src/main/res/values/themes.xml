@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Trabalho_mobile" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="colorAccent">#5B715C</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -12,6 +13,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
     </style>
 
         <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">

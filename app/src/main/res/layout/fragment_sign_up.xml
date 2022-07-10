@@ -67,8 +67,8 @@
             android:backgroundTint="#626262"
             android:ems="10"
             android:hint="Nome Completo"
+            android:inputType="text"
             android:textColor="@color/black"
-            android:inputType="textPassword"
             android:textColorHint="#626262"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
             app:layout_constraintVertical_bias="0.501" />
 
         <EditText
-            android:id="@+id/sign_un_password"
+            android:id="@+id/sign_up_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -106,7 +106,7 @@
             android:layout_marginBottom="100dp"
             android:backgroundTint="#626262"
             android:ems="10"
-            android:hint="Senha"
+            android:hint="Senha (até 8 caracteres)"
             android:textColor="@color/black"
             android:inputType="textPassword"
             android:textColorHint="#626262"
@@ -124,6 +124,7 @@
             android:layout_marginBottom="92dp"
             android:background="#00CC66"
             android:text="Cadastrar"
+            android:enabled="false"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
