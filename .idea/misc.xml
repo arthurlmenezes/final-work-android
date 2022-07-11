@@ -14,6 +14,11 @@
         <entry key="..\:/Users/g_eff/Desktop/final-work-android/app/src/main/res/layout/fragment_reset_password.xml" value="0.33" />
         <entry key="..\:/Users/g_eff/Desktop/final-work-android/app/src/main/res/layout/fragment_sign_in.xml" value="0.2584230635637374" />
         <entry key="..\:/Users/g_eff/Desktop/final-work-android/app/src/main/res/layout/fragment_sign_up.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_category.xml" value="0.25504540867810294" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25504540867810294" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.25504540867810294" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.24081632653061225" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.38796296296296295" />
       </map>
     </option>
   </component>
