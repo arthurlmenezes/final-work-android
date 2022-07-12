@@ -1,7 +1,6 @@
 # Trabalho de Programação para Dispositivos Móveis
 
 ### Alunos: 
-- João Cavalcante Leite Neto - RGA:2020.1906.057-1
 - Gefferson Alves - RGA: 2019.1902.034-1
 - Arthur Menezes
 
