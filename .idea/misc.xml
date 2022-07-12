@@ -26,15 +26,24 @@
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/activity_splash.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/app_bar_main.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/content_main.xml" value="0.16590678824721378" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_anuncio.xml" value="0.16666666666666666" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_category.xml" value="0.16590678824721378" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_favorites.xml" value="0.28442028985507245" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_gallery.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_home.xml" value="0.16590678824721378" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_imoveis.xml" value="0.1281661600810537" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_login.xml" value="0.16666666666666666" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_reset_password.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_sign_in.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_sign_up.xml" value="0.16590678824721378" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/layout/fragment_slideshow.xml" value="0.16590678824721378" />
-        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/nav_header_main.xml" value="0.16590678824721378" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/grid_product_view.xml" value="0.25" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/grid_produtos_layout.xml" value="0.129981884057971" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/nav_header_main.xml" value="0.24721189591078066" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/layout/novo_anuncio.xml" value="0.25" />
         <entry key="..\:/dev/final-work-android/app/src/main/res/menu/activity_main_drawer.xml" value="0.33589743589743587" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/menu/adicionar_registro.xml" value="0.2765625" />
+        <entry key="..\:/dev/final-work-android/app/src/main/res/menu/main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_category.xml" value="0.25504540867810294" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25504540867810294" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.25504540867810294" />

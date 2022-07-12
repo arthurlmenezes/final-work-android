@@ -17,4 +17,5 @@
     <string name="menu_ads">Meus Anúncios</string>
     <string name="menu_properties">Meus imóveis</string>
     <string name="menu_login">Login</string>
+    <string name="button">Button</string>
 </resources>
